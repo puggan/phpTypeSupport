@@ -3,7 +3,8 @@ cd "$(dirname "$0")"
 mkdir -p build
 tsc -p tsconfig.json
 lessc src/style.less build/style.css
-cp src/index.html src/data.json build/
+json5 src/data.json5 --out-file build/data.json
+cp src/index.html build/
 if command -v typescript-json-schema &> /dev/null
 then
   typescript-json-schema src/data.d.ts typeSupportData > typeSupportData.schema.json
