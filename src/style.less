@@ -3,6 +3,10 @@
   max-height: 50px;
 }
 
+table > thead > tr > th {
+  vertical-align: bottom;
+}
+
 table > tbody > tr {
   &:nth-child(odd) {
     background: rgba(0, 0, 0, 0.1);
@@ -10,15 +14,25 @@ table > tbody > tr {
   > td {
     padding: .2em .7em;
 
-    .partialVersion, .version {
+    .partialVersion, .version, .symbol {
+      background: lightgray;
       border-radius: 9px;
       display: inline-block;
       margin-right: 5px;
       padding: 1px 4px;
     }
 
-    .version {
+    &.supported .version {
       background: lightgreen;
+    }
+
+    &.supported .symbol {
+      background: lightgreen;
+    }
+
+    &.none .symbol {
+      background: pink;
+      font-size: 10px;
     }
 
     .partialVersion {

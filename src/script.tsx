@@ -8,19 +8,6 @@ document.addEventListener(
 
         const pageElement = document.getElementById('page') as HTMLDivElement;
 
-        //<editor-fold desc="softwareThs">
-        const softwareThs = [];
-        for (const software of Object.values(data.software)) {
-            softwareThs.push(
-                <th title={software.name}>
-                    <a href={software.website.url}>
-                        <img alt={software.name} class="icon" src={software.icon}/>
-                    </a>
-                </th>
-            );
-        }
-        //</editor-fold>
-
         let referenceCount = 0;
         for (const category of data.categories) {
             const featureTrs = [];
@@ -89,7 +76,7 @@ document.addEventListener(
                             break;
 
                         case "none":
-                            parts.push(<span class="symbol">-</span>);
+                            parts.push(<span class="symbol">❌</span>);
                             break;
 
                         default:
@@ -99,7 +86,7 @@ document.addEventListener(
 
                     //<editor-fold desc="reference">
                     const supportReferences = [];
-                    for (const reference of support.references) {
+                    for (const reference of support.references || []) {
                         supportReferences.push(
                             <a href={reference.url} title={reference.title}>{'[' + (++referenceCount) + ']'}</a>
                         )
@@ -136,7 +123,18 @@ document.addEventListener(
                 //</editor-fold>
             }
 
-            console.log(category, featureTrs);
+            //<editor-fold desc="softwareThs">
+            const softwareThs = [];
+            for (const software of Object.values(data.software)) {
+                softwareThs.push(
+                    <th title={software.name}>
+                        <a href={software.website.url}>
+                            <img alt={software.name} class="icon" src={software.icon}/>
+                        </a>
+                    </th>
+                );
+            }
+            //</editor-fold>
 
             //<editor-fold desc="categories">
             pageElement.appendChild(
