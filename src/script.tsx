@@ -8,7 +8,16 @@ document.addEventListener(
 
         const pageElement = document.getElementById('page') as HTMLDivElement;
 
-        let referenceCount = 0;
+        const references: string[] = [];
+        const addReference = (reference: reference) => {
+            const oldIndex = references.indexOf(reference.url);
+            if (oldIndex >= 0) {
+                return oldIndex + 1;
+            }
+            references.push(reference.url);
+            return references.length;
+        };
+
         for (const category of data.categories) {
             const featureTrs = [];
             for (const feature of category.features) {
@@ -16,7 +25,7 @@ document.addEventListener(
                 const featureReferences = [];
                 for (const reference of feature.references || []) {
                     featureReferences.push(
-                        <a href={reference.url} title={reference.title}>{'[' + (++referenceCount) + ']'}</a>
+                        <a href={reference.url} title={reference.title}>{'[' + (addReference(reference)) + ']'}</a>
                     )
                 }
                 //</editor-fold>
@@ -88,7 +97,7 @@ document.addEventListener(
                     const supportReferences = [];
                     for (const reference of support.references || []) {
                         supportReferences.push(
-                            <a href={reference.url} title={reference.title}>{'[' + (++referenceCount) + ']'}</a>
+                            <a href={reference.url} title={reference.title}>{'[' + (addReference(reference)) + ']'}</a>
                         )
                     }
                     if (supportReferences) {
