@@ -48,7 +48,12 @@
             phpstan: {
               supportType: "supported",
               version: "1.0",
-              // https://github.com/phpstan/phpstan/releases/tag/1.0.0
+              references: [
+                {
+                  title: "PHPStan Release Notes v1.0.0",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/1.0.0",
+                }
+              ]
             }
           }
         },
@@ -62,7 +67,7 @@
             phpstan: {
               supportType: "issue",
               issue: {
-                title: " support property declaration for objects, like we have for arrays #2923 ",
+                title: "Support property declaration for objects, like we have for arrays #2923 ",
                 url: "https://github.com/phpstan/phpstan/issues/2923",
               }
             }
@@ -108,7 +113,12 @@
             phpstan: {
               supportType: "supported",
               version: "0.12",
-              // https://github.com/phpstan/phpstan/releases/tag/0.12.0
+              references: [
+                {
+                  title: "PHPStan Release Notes v0.12.0",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/0.12.0",
+                }
+              ]
             }
           }
         }
@@ -123,16 +133,28 @@
           title: "Union types",
           support: {
             php: {
-              // TODO check version and references
               supportType: "supported",
               version: "8.0",
-              // https://3v4l.org/l2DBY
+              references: [
+                {
+                  title: "PHP 8.0 Release notes: Union-types",
+                  url: "https://www.php.net/releases/8.0/en.php#union-types",
+                },
+                {
+                  title: "3v4l: Return Uniontype",
+                  url: "https://3v4l.org/l2DBY",
+                }
+              ]
             },
             phpstan: {
               supportType: "supported",
               version: "0.9",
-              partialVersion: "0.9",
-              // https://github.com/phpstan/phpstan/releases/tag/0.9
+              references: [
+                {
+                  title: "PHPStan Release Notes v0.9",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/0.9",
+                }
+              ]
             }
           }
         },
@@ -144,13 +166,26 @@
               // TODO check version and references
               supportType: "supported",
               version: "8.1",
-              // https://3v4l.org/UZo8g
-              // https://wiki.php.net/rfc/pure-intersection-types
+              references: [
+                {
+                  title: "3v4l: Return Intersection type",
+                  url: "https://3v4l.org/UZo8g",
+                },
+                {
+                  title: "PHP RFC: Pure intersection types",
+                  url: "https://wiki.php.net/rfc/pure-intersection-types",
+                }
+              ]
             },
             phpstan: {
               supportType: "supported",
               version: "0.9",
-              // https://github.com/phpstan/phpstan/releases/tag/0.9
+              references: [
+                {
+                  title: "PHPStan Release Notes v0.9",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/0.9",
+                }
+              ]
             }
           }
         },
@@ -162,12 +197,22 @@
               // TODO check version and references
               supportType: "supported",
               version: "8.2",
-              // https://3v4l.org/gq0TU
+              references: [
+                {
+                  title: "3v4l: Return type Paranteses",
+                  url: "https://3v4l.org/gq0TU",
+                }
+              ]
             },
             phpstan: {
               supportType: "supported",
               version: "0.9",
-              // https://github.com/phpstan/phpstan/releases/tag/0.9
+              references: [
+                {
+                  title: "PHPStan Release Notes v0.9",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/0.9",
+                }
+              ]
             }
           }
         },
@@ -193,7 +238,12 @@
             phpstan: {
               supportType: "supported",
               version: "1.6",
-              // https://github.com/phpstan/phpstan/releases/tag/1.6.0
+              references: [
+                {
+                  title: "PHPStan Release Notes v1.6.0",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/1.6.0",
+                }
+              ]
             }
           }
         },
@@ -207,7 +257,12 @@
             phpstan: {
               supportType: "supported",
               version: "1.9",
-              // https://phpstan.org/blog/phpstan-1-9-0-with-phpdoc-asserts-list-type#phpdoc-asserts
+              references: [
+                {
+                  title: "PHPStan 1.9 PHPDoc asserts",
+                  url: "https://phpstan.org/blog/phpstan-1-9-0-with-phpdoc-asserts-list-type#phpdoc-asserts",
+                }
+              ]
             }
           }
         },
@@ -221,7 +276,12 @@
             phpstan: {
               supportType: "supported",
               version: "1.9",
-              // https://phpstan.org/blog/phpstan-1-9-0-with-phpdoc-asserts-list-type#parameter-type-assigned-by-reference
+              references: [
+                {
+                  title: "PHPStan 1.9 Parameter type assigned by reference",
+                  url: "https://phpstan.org/blog/phpstan-1-9-0-with-phpdoc-asserts-list-type#parameter-type-assigned-by-reference",
+                }
+              ]
             }
           }
         }
@@ -241,7 +301,12 @@
             phpstan: {
               supportType: "supported",
               version: "0.12",
-              // https://github.com/phpstan/phpstan/releases/tag/0.12.0
+              references: [
+                {
+                  title: "PHPStan Release Notes v0.12.0",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/0.12.0",
+                }
+              ]
             }
           }
         },
@@ -279,7 +344,12 @@
             phpstan: {
               supportType: "supported",
               version: "1.2",
-              // https://github.com/phpstan/phpstan/releases/tag/1.2.0
+              references: [
+                {
+                  title: "PHPStan Release Notes v1.2.0",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/1.2.0",
+                }
+              ]
             }
           }
         },
@@ -293,7 +363,12 @@
             phpstan: {
               supportType: "supported",
               version: "1.9",
-              // https://github.com/phpstan/phpstan/releases/tag/1.9.0
+              references: [
+                {
+                  title: "PHPStan Release Notes v1.9.0",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/1.9.0",
+                }
+              ]
             }
           }
         },
@@ -307,7 +382,12 @@
             phpstan: {
               supportType: "supported",
               version: "1.0",
-              // https://github.com/phpstan/phpstan/releases/tag/1.0.0
+              references: [
+                {
+                  title: "PHPStan Release Notes v1.0.0",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/1.0.0",
+                }
+              ]
             }
           }
         },
@@ -321,7 +401,12 @@
             phpstan: {
               supportType: "supported",
               version: "0.12",
-              // https://github.com/phpstan/phpstan/releases/tag/0.12.0
+              references: [
+                {
+                  title: "PHPStan Release Notes v0.12.0",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/0.12.0",
+                }
+              ]
             }
           }
         },
@@ -347,7 +432,12 @@
             phpstan: {
               supportType: "supported",
               version: "1.6",
-              // https://github.com/phpstan/phpstan/releases/tag/1.6.0
+              references: [
+                {
+                  title: "PHPStan Release Notes v1.6.0",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/1.6.0",
+                }
+              ]
             }
           }
         },
@@ -361,7 +451,12 @@
             phpstan: {
               supportType: "supported",
               version: "1.5",
-              // https://github.com/phpstan/phpstan/releases/tag/1.5.0
+              references: [
+                {
+                  title: "PHPStan Release Notes v1.5.0",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/1.5.0",
+                }
+              ]
             }
           }
         },
@@ -375,7 +470,12 @@
             phpstan: {
               supportType: "supported",
               version: "1.3",
-              // https://github.com/phpstan/phpstan/releases/tag/1.3.0
+              references: [
+                {
+                  title: "PHPStan Release Notes v1.3.0",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/1.3.0",
+                }
+              ]
             }
           }
         },
@@ -401,7 +501,12 @@
             phpstan: {
               supportType: "supported",
               version: "1.9",
-              // https://phpstan.org/blog/phpstan-1-9-0-with-phpdoc-asserts-list-type#list-type
+              references: [
+                {
+                  title: "PHPStan 1.0 List-type",
+                  url: "https://phpstan.org/blog/phpstan-1-9-0-with-phpdoc-asserts-list-type#list-type",
+                }
+              ]
             }
           }
         },
@@ -415,7 +520,12 @@
             phpstan: {
               supportType: "supported",
               version: "1.9",
-              // https://github.com/phpstan/phpstan/releases/tag/1.9.0
+              references: [
+                {
+                  title: "PHPStan Release Notes v1.9.0",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/1.9.0",
+                }
+              ]
             }
           }
         }
@@ -461,7 +571,12 @@
               // TODO check version and references
               supportType: "supported",
               version: "7.0",
-              // https://3v4l.org/JFmei
+              references: [
+                {
+                  title: "3v4l: Param type bool",
+                  url: "https://3v4l.org/JFmei",
+                }
+              ]
             },
             phpstan: {
               supportType: "supported",
@@ -481,7 +596,12 @@
             phpstan: {
               supportType: "supported",
               version: "0.4",
-              // https://github.com/phpstan/phpstan/releases/tag/0.4
+              references: [
+                {
+                  title: "PHPStan Release Notes v0.4",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/0.4",
+                }
+              ]
             }
           }
         },
@@ -492,13 +612,23 @@
             php: {
               supportType: "supported",
               version: "8.2",
-              // https://3v4l.org/CMiSh
+              references: [
+                {
+                  title: "3v4l: Param type false",
+                  url: "https://3v4l.org/CMiSh",
+                }
+              ]
             },
             phpstan: {
               supportType: "supported",
               version: "0.6",
               partialVersion: "0.5",
-              // https://github.com/phpstan/phpstan/releases/tag/0.6
+              references: [
+                {
+                  title: "PHPStan Release Notes v0.6",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/0.6",
+                }
+              ]
             }
           }
         },
@@ -512,7 +642,12 @@
             phpstan: {
               supportType: "supported",
               version: "0.7",
-              // https://github.com/phpstan/phpstan/releases/tag/0.7
+              references: [
+                {
+                  title: "PHPStan Release Notes v0.7",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/0.7",
+                }
+              ]
             }
           }
         },
@@ -549,8 +684,16 @@
               supportType: "supported",
               version: "7.0",
               partialVersion: "5.4",
-              // https://3v4l.org/c9cpM
-              // https://3v4l.org/FSbD9
+              references: [
+                {
+                  title: "3v4l: Return type callable",
+                  url: "https://3v4l.org/c9cpM",
+                },
+                {
+                  title: "3v4l: Param type callable",
+                  url: "https://3v4l.org/FSbD9",
+                }
+              ]
             },
             phpstan: {
               supportType: "supported",
@@ -565,12 +708,22 @@
               // TODO check version and references
               supportType: "supported",
               version: "7.1",
-              // https://3v4l.org/gXtEq
+              references: [
+                {
+                  title: "3v4l: Return type iterable",
+                  url: "https://3v4l.org/gXtEq",
+                }
+              ]
             },
             phpstan: {
               supportType: "supported",
               version: "0.4",
-              // https://github.com/phpstan/phpstan/releases/tag/0.4
+              references: [
+                {
+                  title: "PHPStan Release Notes v0.4",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/0.4",
+                }
+              ]
             }
           }
         },
@@ -582,12 +735,22 @@
               // TODO check version and references
               supportType: "supported",
               version: "7.2",
-              // https://3v4l.org/uRdPY
+              references: [
+                {
+                  title: "3v4l: Return type object",
+                  url: "https://3v4l.org/uRdPY",
+                }
+              ]
             },
             phpstan: {
               supportType: "supported",
               version: "0.9",
-              // https://github.com/phpstan/phpstan/releases/tag/0.9
+              references: [
+                {
+                  title: "PHPStan Release Notes v0.9",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/0.9",
+                }
+              ]
             }
           }
         },
@@ -612,7 +775,12 @@
             phpstan: {
               supportType: "supported",
               version: "0.4",
-              // https://github.com/phpstan/phpstan/releases/tag/0.4
+              references: [
+                {
+                  title: "PHPStan Release Notes v0.4",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/0.4",
+                }
+              ]
             }
           }
         },
@@ -662,7 +830,12 @@
             phpstan: {
               supportType: "supported",
               version: "0.5",
-              // https://github.com/phpstan/phpstan/releases/tag/0.5
+              references: [
+                {
+                  title: "PHPStan Release Notes v0.5",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/0.5",
+                }
+              ]
             }
           }
         },
@@ -673,12 +846,22 @@
             php: {
               supportType: "supported",
               version: "8.1",
-              // https://wiki.php.net/rfc/noreturn_type
+              references: [
+                {
+                  title: "RFC: noreturn type",
+                  url: "https://wiki.php.net/rfc/noreturn_type",
+                }
+              ]
             },
             phpstan: {
               supportType: "supported",
               version: "1.1",
-              // https://github.com/phpstan/phpstan/releases/tag/1.1.0
+              references: [
+                {
+                  title: "PHPStan Release Notes v1.1.0",
+                  url: "https://github.com/phpstan/phpstan/releases/tag/1.1.0",
+                }
+              ]
             }
           }
         }
