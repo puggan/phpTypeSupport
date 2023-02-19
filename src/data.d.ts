@@ -1,7 +1,7 @@
 type softwareCodes = 'php' | 'phpstorm' | 'phpstan' | 'psalm';
 //  phpDocumentor, Zend Studio, NetBeans, ActiveState Komodo Edit and IDE, PHPEdit and Aptana Studio, VSCode
 
-type supportTypes = 'supported' | "upcoming'|'dev'|'pr'|'issue'|'none";
+type supportTypes = 'supported' | 'upcoming' | 'dev' | 'pr' | 'issue' | 'none';
 
 type version = string;
 
@@ -26,26 +26,35 @@ type feature = {
     name: string;
     references?: reference[];
     support: {
-        [key: softwareCodes]: featureSupport;
+        [key in softwareCodes]: featureSupport;
+        /*
+        php: featureSupport;
+        phpstorm: featureSupport;
+        phpstan: featureSupport;
+        psalm: featureSupport;
+        */
     };
     title: string;
 }
 
 type featureSupport = {
-    issue?: string;
+    issue?: reference;
     partialVersion?: version;
-    pr?: string;
+    pr?: reference;
     references?: reference[];
     supportType: supportTypes;
     version?: version;
-} & {
-    supportType: 'supported'|'upcoming';
-    version: version;
 }
 
 type typeSupportData = {
     software: {
-        [key: softwareCodes]: software;
+        [key in softwareCodes]: software;
+        /*
+        php: software;
+        phpstorm: software;
+        phpstan: software;
+        psalm: software;
+        */
     },
     categories: category[];
 };

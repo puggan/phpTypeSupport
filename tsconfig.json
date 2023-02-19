@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "jsxFactory": "JsxFactory.createElement",
+    "outFile": "build/script.js",
+    "target": "ES2022"
+  },
+  "files": [
+    "src/jsx.ts",
+    "src/script.tsx"
+  ]
+}

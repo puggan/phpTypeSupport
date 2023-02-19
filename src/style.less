@@ -1,0 +1,34 @@
+.icon {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+table > tbody > tr {
+  &:nth-child(odd) {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  > td {
+    padding: .2em .7em;
+
+    .partialVersion, .version {
+      border-radius: 9px;
+      display: inline-block;
+      margin-right: 5px;
+      padding: 1px 4px;
+    }
+
+    .version {
+      background: lightgreen;
+    }
+
+    .partialVersion {
+      background: lightblue;
+    }
+
+    > sup > a {
+      font-size: 8px;
+      text-decoration: none;
+      margin-right: 2px;
+    }
+  }
+}
