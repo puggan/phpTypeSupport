@@ -1,446 +1,684 @@
 {
-  "software": {
-    "php": {
-      "icon": "https://www.php.net/favicon-196x196.png?v=2",
-      "name": "PHP Core",
-      "website": {
-        "title": "PHP.net",
-        "url": "https://www.php.net/"
+  software: {
+    php: {
+      icon: "https://www.php.net/favicon-196x196.png?v=2",
+      name: "PHP Core",
+      website: {
+        title: "PHP.net",
+        url: "https://www.php.net/",
       }
     },
-    "phpstan": {
-      "icon": "https://i.imgur.com/WaRKPlC.png",
-      "name": "PHPStan",
-      "website": {
-        "title": "PHPStan.org",
-        "url": "https://phpstan.org/"
+    phpstan: {
+      icon: "https://i.imgur.com/WaRKPlC.png",
+      name: "PHPStan",
+      website: {
+        title: "PHPStan.org",
+        url: "https://phpstan.org/",
       }
     },
-    "psalm": {
-      "icon": "https://psalm.dev/article_thumbnail.png",
-      "name": "Psalm",
-      "website": {
-        "title": "Psalm.dev",
-        "url": "https://psalm.dev/"
+    psalm: {
+      icon: "https://psalm.dev/article_thumbnail.png",
+      name: "Psalm",
+      website: {
+        title: "Psalm.dev",
+        url: "https://psalm.dev/",
       }
     },
-    "phpstorm": {
-      "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/PhpStorm_Icon.svg/512px-PhpStorm_Icon.svg.png",
-      "name": "JetBrain PHPStorm",
-      "website": {
-        "title": "JetBrain PHPStorm",
-        "url": "https://www.jetbrains.com/phpstorm/"
+    phpstorm: {
+      icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/PhpStorm_Icon.svg/512px-PhpStorm_Icon.svg.png",
+      name: "JetBrain PHPStorm",
+      website: {
+        title: "JetBrain PHPStorm",
+        url: "https://www.jetbrains.com/phpstorm/",
       }
     }
   },
-  "categories": [
+  categories: [
     {
-      "name": "shapes",
-      "description": "Types with shape information.",
-      "features": [
+      name: "shapes",
+      description: "Types with shape information.",
+      features: [
         {
-          "name": "array{}",
-          "title": "Shaped arrays like array{a: int, b: string}",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "array{}",
+          title: "Shaped arrays like array{a: int, b: string}",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "1.0",
+              // https://github.com/phpstan/phpstan/releases/tag/1.0.0
             }
           }
         },
         {
-          "name": "object{}",
-          "title": "Shaped object like \\stdClass{a: int, b: string} or object{a: int, b: string}",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "object{}",
+          title: "Shaped object like \\stdClass{a: int, b: string} or object{a: int, b: string}",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "issue",
+              issue: {
+                title: " support property declaration for objects, like we have for arrays #2923 ",
+                url: "https://github.com/phpstan/phpstan/issues/2923",
+              }
             }
           }
         }
       ]
     },
     {
-      "name": "generic",
-      "description": "Types with generic extensions",
-      "features": [
+      name: "generic",
+      description: "Types with generic extensions",
+      features: [
         {
-          "name": "int[]",
-          "title": "Refer to array specifying type of value only",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "int[]",
+          title: "Refer to array specifying type of value only",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
             }
           }
         },
         {
-          "name": "array<int, string>",
-          "title": "Refer to array specifying type of both key and value",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "array<int, string>",
+          title: "Refer to array specifying type of both key and value",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
             }
           }
         },
         {
-          "name": "class @template",
-          "title": "Refer to classes with 1 or more @template defined, like: Collection<int, string>",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "class @template",
+          title: "Refer to classes with 1 or more @template defined, like: Collection<int, string>",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "0.12",
+              // https://github.com/phpstan/phpstan/releases/tag/0.12.0
             }
           }
         }
       ]
     },
     {
-      "name": "operators",
-      "description": "Types built with operators and paranteses.",
-      "features": [
+      name: "operators",
+      description: "Types built with operators and paranteses.",
+      features: [
         {
-          "name": "ClassA|ClassB",
-          "title": "Union types",
-          "support": {
-            "php": {
+          name: "ClassA|ClassB",
+          title: "Union types",
+          support: {
+            php: {
               // TODO check version and references
-              "supportType": "supported",
+              supportType: "supported",
               version: "8.0",
               // https://3v4l.org/l2DBY
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "0.9",
+              partialVersion: "0.9",
+              // https://github.com/phpstan/phpstan/releases/tag/0.9
             }
           }
         },
         {
-          "name": "ClassA&ClassB",
-          "title": "Intersection types",
-          "support": {
-            "php": {
+          name: "ClassA&ClassB",
+          title: "Intersection types",
+          support: {
+            php: {
               // TODO check version and references
-              "supportType": "supported",
+              supportType: "supported",
               version: "8.1",
               // https://3v4l.org/UZo8g
+              // https://wiki.php.net/rfc/pure-intersection-types
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "0.9",
+              // https://github.com/phpstan/phpstan/releases/tag/0.9
             }
           }
         },
         {
-          "name": "(ClassA|ClassB)&ClassC",
-          "title": "Parentheses",
-          "support": {
-            "php": {
+          name: "(ClassA|ClassB)&ClassC",
+          title: "Parentheses",
+          support: {
+            php: {
               // TODO check version and references
-              "supportType": "supported",
-              version: "8.2"
+              supportType: "supported",
+              version: "8.2",
               // https://3v4l.org/gq0TU
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "0.9",
+              // https://github.com/phpstan/phpstan/releases/tag/0.9
             }
           }
         },
         {
-          "name": "self::SOME_*",
-          "title": "Class constants as types",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "self::SOME_*",
+          title: "Class constants as types",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
             }
           }
         },
         {
-          "name": "$id is int ? int : float",
-          "title": "Conditional types",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "$id is int ? int : float",
+          title: "Conditional types",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "1.6",
+              // https://github.com/phpstan/phpstan/releases/tag/1.6.0
+            }
+          }
+        },
+        {
+          name: "@assert",
+          title: "narrow types with PHPDoc asserts: @assert, @assert-if-true, @assert-if-false",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "1.9",
+              // https://phpstan.org/blog/phpstan-1-9-0-with-phpdoc-asserts-list-type#phpdoc-asserts
+            }
+          }
+        },
+        {
+          name: "@param-out",
+          title: "override type of self or parameter passed by references: @phpstan-self-out, @param-out",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "1.9",
+              // https://phpstan.org/blog/phpstan-1-9-0-with-phpdoc-asserts-list-type#parameter-type-assigned-by-reference
             }
           }
         }
       ]
     },
     {
-      "name": "limited",
-      "description": "Types that limits/narrows a basic types",
-      "features": [
+      name: "limited",
+      description: "Types that limits/narrows a basic types",
+      features: [
         {
-          "name": "class-string<T>",
-          "title": "String limited to Class-references",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "class-string<T>",
+          title: "String limited to Class-references",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "0.12",
+              // https://github.com/phpstan/phpstan/releases/tag/0.12.0
             }
           }
         },
         {
-          "name": "non-empty-string",
-          "title": "string that's ont empty",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "non-empty-string",
+          title: "string that's not empty",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
             }
           }
         },
         {
-          "name": "non-falsy-string",
-          "title": "string thats when converted to boolean resolves to true",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "non-falsy-string",
+          title: "string thats when converted to boolean resolves to true",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
             }
           }
         },
         {
-          "name": "literal-string",
-          "title": "strings defined in the code, not supplied by user or external sources",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "literal-string",
+          title: "strings defined in the code, not supplied by user or external sources",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "1.2",
+              // https://github.com/phpstan/phpstan/releases/tag/1.2.0
             }
           }
         },
         {
-          "name": "callable-string",
-          "title": "strings that can be executed, like a string that refers to a method or function.",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "callable-string",
+          title: "strings that can be executed, like a string that refers to a method or function.",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "1.9",
+              // https://github.com/phpstan/phpstan/releases/tag/1.9.0
             }
           }
         },
         {
-          "name": "numeric-string",
-          "title": "string that can be converted to a number",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "numeric-string",
+          title: "string that can be converted to a number",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "1.0",
+              // https://github.com/phpstan/phpstan/releases/tag/1.0.0
             }
           }
         },
         {
-          "name": "int<0, 100>",
-          "title": "ranged int like: int<0, 100>, int<min, 100> and int<50, max>",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "int<0, 100>",
+          title: "ranged int like: int<0, 100>, int<min, 100> and int<50, max>",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "0.12",
+              // https://github.com/phpstan/phpstan/releases/tag/0.12.0
             }
           }
         },
         {
-          "name": "positive-int",
-          "title": "positive-int and negative-int as named ranged ints",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "positive-int",
+          title: "positive-int and negative-int as named ranged ints",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
             }
           }
         },
         {
-          "name": "int-mask-of<Foo::INT_*>",
-          "title": "bit-masked value of a set of values",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "int-mask-of<Foo::INT_*>",
+          title: "bit-masked value of a set of values",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "1.6",
+              // https://github.com/phpstan/phpstan/releases/tag/1.6.0
             }
           }
         },
         {
-          "name": "non-empty-array<int, T>",
-          "title": "an array with at least one element",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "value-of<BackedEnum>",
+          title: "type of union all literal values of an backed enum",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "1.5",
+              // https://github.com/phpstan/phpstan/releases/tag/1.5.0
             }
           }
         },
         {
-          "name": "non-empty-list",
-          "title": "an list with at least one element, an list are arrays with sequential integer keys starting at 0",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "value-of<constArray>",
+          title: "value-of<self::A> and key-of<self::A> where self::A is an const array",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "1.3",
+              // https://github.com/phpstan/phpstan/releases/tag/1.3.0
+            }
+          }
+        },
+        {
+          name: "non-empty-array<int, T>",
+          title: "an array with at least one element",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
+            }
+          }
+        },
+        {
+          name: "non-empty-list",
+          title: "an list with at least one element, where list is an array that passes array_is_list()",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "1.9",
+              // https://phpstan.org/blog/phpstan-1-9-0-with-phpdoc-asserts-list-type#list-type
+            }
+          }
+        },
+        {
+          name: "callable-object",
+          title: "object that can be executed / implements __invoke()",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "1.9",
+              // https://github.com/phpstan/phpstan/releases/tag/1.9.0
             }
           }
         }
       ]
     },
     {
-      "name": "builtin",
-      "description": "Types defined in php",
-      "features": [
+      name: "builtin",
+      description: "Types defined in php",
+      features: [
         {
-          "name": "ClassNames",
-          "title": "using classes like \\stdClass as types",
-          "support": {
-            "php": {
-              "supportType": "supported",
-              "version": "7.0",
-              "partialVersion": "5.0",
-              "references": [
+          name: "ClassNames",
+          title: "using classes like \\stdClass as types",
+          support: {
+            php: {
+              supportType: "supported",
+              version: "7.0",
+              partialVersion: "5.0",
+              references: [
                 {
-                  "title": "PHP 7.0: return-type-declarations",
-                  "url": "https://www.php.net/manual/en/migration70.new-features.php#migration70.new-features.return-type-declarations"
+                  title: "PHP 7.0: return-type-declarations",
+                  url: "https://www.php.net/manual/en/migration70.new-features.php#migration70.new-features.return-type-declarations",
                 },
                 {
-                  "title": "3v4l: Class as return Type",
-                  "url": "https://3v4l.org/oL46H"
+                  title: "3v4l: Class as return Type",
+                  url: "https://3v4l.org/oL46H",
                 },
                 {
-                  "title": "3v4l: Class as parameter Type",
-                  "url": "https://3v4l.org/MYvKv"
+                  title: "3v4l: Class as parameter Type",
+                  url: "https://3v4l.org/MYvKv",
                 }
               ]
+            },
+            phpstan: {
+              supportType: "supported",
             }
           }
         },
         {
-          "name": "int, bool, string",
-          "title": "Scalar builin types",
-          "support": {
-            "php": {
+          name: "int, bool, string",
+          title: "Scalar builin types",
+          support: {
+            php: {
               // TODO check version and references
-              "supportType": "supported",
+              supportType: "supported",
               version: "7.0",
               // https://3v4l.org/JFmei
+            },
+            phpstan: {
+              supportType: "supported",
             }
           }
         },
         {
-          "name": "?string",
-          "title": "Nullable types, ?string = string|null",
-          "support": {
-            "php": {
+          name: "?string",
+          title: "Nullable types, ?string = string|null",
+          support: {
+            php: {
               // TODO check version and references
-              "supportType": "supported",
-              version: "7.1"
+              supportType: "supported",
+              version: "7.1",
               // 7.1 https://www.php.net/manual/en/migration71.new-features.php#migration71.new-features.nullable-types
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "0.4",
+              // https://github.com/phpstan/phpstan/releases/tag/0.4
             }
           }
         },
         {
-          "name": "false",
-          "title": "union & standalone types for true, false, null",
-          "support": {
-            "php": {
-              "supportType": "supported",
-              version: "8.2"
+          name: "false",
+          title: "union & standalone types for true, false, null",
+          support: {
+            php: {
+              supportType: "supported",
+              version: "8.2",
               // https://3v4l.org/CMiSh
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "0.6",
+              partialVersion: "0.5",
+              // https://github.com/phpstan/phpstan/releases/tag/0.6
             }
           }
         },
         {
-          "name": "scalar",
-          "title": "the type scalar: int|float|string|boolean",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "scalar",
+          title: "the type scalar: int|float|string|boolean",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "0.7",
+              // https://github.com/phpstan/phpstan/releases/tag/0.7
             }
           }
         },
         {
-          "name": "resource",
-          "title": "built int type resource",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "resource",
+          title: "built int type resource",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
             }
           }
         },
         {
-          "name": "array-key",
-          "title": "the type array-key, types allowed to be used as index in an array: int|string",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "array-key",
+          title: "the type array-key, types allowed to be used as index in an array: int|string",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
             }
           }
         },
         {
-          "name": "callable",
-          "title": "the type callable, any kind of executable reference like callable-string, callable array or a Closure",
-          "support": {
-            "php": {
+          name: "callable",
+          title: "the type callable, any kind of executable reference like callable-string, callable array or a Closure",
+          support: {
+            php: {
               // TODO check version and references
-              "supportType": "supported",
+              supportType: "supported",
               version: "7.0",
-              partialVersion: "5.4"
+              partialVersion: "5.4",
               // https://3v4l.org/c9cpM
               // https://3v4l.org/FSbD9
+            },
+            phpstan: {
+              supportType: "supported",
             }
           }
         },
         {
-          "name": "iterable",
-          "title": "the type iterable, types that can be used to loop over, like arrays and generators.",
-          "support": {
-            "php": {
+          name: "iterable",
+          title: "the type iterable, types that can be used to loop over, like arrays and generators.",
+          support: {
+            php: {
               // TODO check version and references
-              "supportType": "supported",
+              supportType: "supported",
               version: "7.1",
               // https://3v4l.org/gXtEq
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "0.4",
+              // https://github.com/phpstan/phpstan/releases/tag/0.4
             }
           }
         },
         {
-          "name": "object",
-          "title": "a object of any class",
-          "support": {
-            "php": {
+          name: "object",
+          title: "a object of any class",
+          support: {
+            php: {
               // TODO check version and references
-              "supportType": "supported",
+              supportType: "supported",
               version: "7.2",
               // https://3v4l.org/uRdPY
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "0.9",
+              // https://github.com/phpstan/phpstan/releases/tag/0.9
             }
           }
         },
         {
-          "name": "void",
-          "title": "used when function returns nothing",
-          "support": {
-            "php": {
-              "supportType": "supported",
-              "version": "7.1",
-              "references": [
+          name: "void",
+          title: "used when function returns nothing",
+          support: {
+            php: {
+              supportType: "supported",
+              version: "7.1",
+              references: [
                 {
-                  "title": "PHP 7.1: void-functions",
-                  "url": "https://www.php.net/manual/en/migration71.new-features.php#migration71.new-features.void-functions"
+                  title: "PHP 7.1: void-functions",
+                  url: "https://www.php.net/manual/en/migration71.new-features.php#migration71.new-features.void-functions",
                 },
                 {
-                  "title": "3v4l: Return type void",
-                  "url": "https://3v4l.org/a8MQ5"
+                  title: "3v4l: Return type void",
+                  url: "https://3v4l.org/a8MQ5",
                 }
               ]
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "0.4",
+              // https://github.com/phpstan/phpstan/releases/tag/0.4
             }
           }
         },
         {
-          "name": "self",
-          "title": "magic reference to the class the method is in",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "self",
+          title: "magic reference to the class the method is in",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
             }
           }
         },
         {
-          "name": "static",
-          "title": "magic reference to the class of the instance it's executed on",
-          "support": {
-            "php": {
-              "supportType": "supported",
-              "version": "7.0",
-              "partialVersion": "5.0",
-              "references": [
+          name: "static",
+          title: "magic reference to the class of the instance it's executed on",
+          support: {
+            php: {
+              supportType: "supported",
+              version: "7.0",
+              partialVersion: "5.0",
+              references: [
                 {
-                  "title": "3v4l: Return type self",
-                  "url": "https://3v4l.org/1o77P"
+                  title: "3v4l: Return type self",
+                  url: "https://3v4l.org/1o77P",
                 },
                 {
-                  "title": "3v4l: Param type self",
-                  "url": "https://3v4l.org/6lTGg"
+                  title: "3v4l: Param type self",
+                  url: "https://3v4l.org/6lTGg",
                 }
               ]
+            },
+            phpstan: {
+              supportType: "supported",
             }
           }
         },
         {
-          "name": "$this",
-          "title": "magic reference to exactly the instance it was executed on",
-          "support": {
-            "php": {
-              "supportType": "none"
+          name: "$this",
+          title: "magic reference to exactly the instance it was executed on",
+          support: {
+            php: {
+              supportType: "none",
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "0.5",
+              // https://github.com/phpstan/phpstan/releases/tag/0.5
+            }
+          }
+        },
+        {
+          name: "never",
+          title: "magic reference to exactly the instance it was executed on",
+          support: {
+            php: {
+              supportType: "supported",
+              version: "8.1",
+              // https://wiki.php.net/rfc/noreturn_type
+            },
+            phpstan: {
+              supportType: "supported",
+              version: "1.1",
+              // https://github.com/phpstan/phpstan/releases/tag/1.1.0
             }
           }
         }
